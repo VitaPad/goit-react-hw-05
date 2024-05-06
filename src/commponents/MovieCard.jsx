@@ -1,6 +1,6 @@
-export default function MovieCard(item) {
+export default function MovieCard(movie) {
   return (
-    <div name={item.movie_id}>
+    <div name={movie.title}>
       <h2>Movie Details</h2>
       {/* <img src={poster_path} alt="" /> */}
       {/*     <p>
