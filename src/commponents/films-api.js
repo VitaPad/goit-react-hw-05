@@ -11,7 +11,7 @@ export const getMovies = async (searchQuery) => {
   console.log(response.data);
   return response.data;
 };
-export const getMoviesById = async () => {
+export const getMoviesById = async (movie_id) => {
   const response = await axios.get(`/movie/${movie_id}`);
   console.log(response.data);
   return response.data;
