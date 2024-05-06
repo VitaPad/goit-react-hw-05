@@ -9,13 +9,13 @@ export default function MovieDetailsPage() {
   const [movie, setMovie] = useState(null);
   const [error, setError] = useState(false);
   const [isLoading, setLoading] = useState(false);
-  const { movie_id } = useParams();
+  const { movieId } = useParams();
 
   useEffect(() => {
     async function fetchDetailsMovie() {
       try {
         setLoading(true);
-        const data = await getMoviesById(movie_id);
+        const data = await getMoviesById(movieId);
         setMovie(data);
         setError(false);
       } catch (error) {
@@ -25,7 +25,7 @@ export default function MovieDetailsPage() {
       }
     }
     fetchDetailsMovie();
-  }, [movie_id]);
+  }, [movieId]);
 
   return (
     <div>
