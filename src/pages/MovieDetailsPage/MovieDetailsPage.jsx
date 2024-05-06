@@ -35,7 +35,8 @@ export default function MovieDetailsPage() {
           message={"Failed to fetch movies. Please try again later."}
         />
       )}
-      {movie && <MovieCard items={movie} />}
+      {movie && <MovieCard item={movie} />}
+
       <ul>
         <li>
           <Link to="cast">Cast</Link>
