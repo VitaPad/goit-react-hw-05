@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, Outlet, useParams } from "react-router-dom";
 import { getMoviesById } from "../../commponents/films-api";
 import Loader from "../../commponents/Loader";
 import ErrorMessage from "../../commponents/ErrorMessage";
@@ -36,7 +36,6 @@ export default function MovieDetailsPage() {
         />
       )}
       {movie && <MovieCard item={movie} />}
-
       <ul>
         <li>
           <Link to="cast">Cast</Link>
@@ -45,6 +44,7 @@ export default function MovieDetailsPage() {
           <Link to="reviews">Reviews</Link>
         </li>
       </ul>
+      <Outlet />
     </div>
   );
 }
