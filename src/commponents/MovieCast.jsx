@@ -16,7 +16,7 @@ export default function MovieCast() {
       try {
         setLoading(true);
         const data = await getMoviesCast(movieId);
-        setCast(data);
+        setCast(data.cast);
         setError(false);
       } catch (error) {
         setError(true);
