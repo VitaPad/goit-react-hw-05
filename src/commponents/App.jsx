@@ -5,8 +5,8 @@ import HomePage from "../pages/HomePage/HomePage";
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
 import MoviesPage from "../pages/MoviesPage/MoviesPage";
 import MovieDetailsPage from "../pages/MovieDetailsPage/MovieDetailsPage";
-import MovieCast from "./MovieCast";
 import MovieReviews from "./MovieReviews";
+import MovieCast from "./MovieCast.jsx";
 
 function App() {
   return (

@@ -22,3 +22,9 @@ export const getMoviesTrends = async () => {
   console.log(response.data);
   return response.data;
 };
+
+export const getMoviesCast = async (movieId) => {
+  const response = await axios.get(`/movie/${movieId}/credits`);
+  console.log(response.data);
+  return response.data;
+};
