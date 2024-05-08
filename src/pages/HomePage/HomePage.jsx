@@ -34,7 +34,7 @@ export default function HomePage() {
         />
       )}
       {console.log("Data being passed to MovieList:", movies)}
-      {movies.length > 0 && <MovieList items={movies} />}
+      {movies && movies.length > 0 && <MovieList movies={movies} />}
     </div>
   );
 }

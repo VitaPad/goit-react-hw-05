@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 
-export default function MovieList({ items }) {
-  console.log("Movies in MovieList:", items);
+export default function MovieList({ movies }) {
+  console.log("Movies in MovieList:", movies);
   return (
     <ul>
       <h2>Trending today</h2>
-      {items.map((item) => (
-        <li key={item.id}>
-          <Link to={`/movies/${item.id}`}>{item.title}</Link>
+      {movies.map((movie) => (
+        <li key={movie.id}>
+          <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
         </li>
       ))}
     </ul>

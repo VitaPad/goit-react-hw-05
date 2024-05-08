@@ -6,10 +6,12 @@ const API_KEY =
 axios.defaults.headers.common["Authorization"] = `Bearer ${API_KEY}`;
 const time_window = "day";
 
-export const getMovies = async (searchQuery) => {
-  const response = await axios.get(`/search/movie?query=${searchQuery}`);
+export const getMovies = async (searchQuery, currentPage) => {
+  const response = await axios.get(
+    `/search/movie?query=${searchQuery}&page=${currentPage}`
+  );
   console.log(response.data);
-  return response.data;
+  return response.data.results;
 };
 export const getMoviesById = async (movieId) => {
   const response = await axios.get(`/movie/${movieId}`);
