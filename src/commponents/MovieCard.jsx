@@ -3,7 +3,7 @@ import css from "./MovieCard.module.css";
 export default function MovieCard({ item }) {
   const imageBaseUrl = "https://image.tmdb.org/t/p/w400";
   return (
-    <div>
+    <div className={css.container}>
       <h2 className={css.title}>Movie Details</h2>
       <img src={`${imageBaseUrl}${item.backdrop_path}`} alt="" />
       <p>

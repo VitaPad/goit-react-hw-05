@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getMoviesReviews } from "./films-api";
+import css from "./MovieReviews.module.css";
 import Loader from "./Loader";
 import ErrorMessage from "./ErrorMessage";
 
@@ -33,9 +34,9 @@ export default function MovieReviews() {
           {reviews.map((item) => (
             <li key={item.id}>
               <p>
-                <b>Author:{item.author}</b>
+                <b className={css.text}>Author:{item.author}</b>
               </p>
-              <p>{item.content}</p>
+              <p className={css.text}>{item.content}</p>
             </li>
           ))}
         </ul>
