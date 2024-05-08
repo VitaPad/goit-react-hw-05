@@ -1,10 +1,22 @@
 import { NavLink } from "react-router-dom";
+import css from "./Navigation.module.css";
+import clsx from "clsx";
+
+const gerNavLink = ({ isActive }) => {
+  return clsx(css.link, isActive && css.active);
+};
 
 export default function Navigation() {
   return (
-    <nav>
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/movies">Muvies</NavLink>
-    </nav>
+    <header className={css.header}>
+      <nav className={css.container}>
+        <NavLink to="/" className={gerNavLink}>
+          Home
+        </NavLink>
+        <NavLink to="/movies" className={gerNavLink}>
+          Muvies
+        </NavLink>
+      </nav>
+    </header>
   );
 }

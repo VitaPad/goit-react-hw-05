@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { getMoviesCast } from "./films-api";
 import Loader from "./Loader";
 import ErrorMessage from "./ErrorMessage";
+import css from "./MovieCast.module.css";
 
 export default function MovieCast() {
   const [cast, setCast] = useState([]);
@@ -28,16 +29,22 @@ export default function MovieCast() {
   }, [movieId]);
 
   return (
-    <div>
+    <div className={css.container}>
       {cast.length > 0 && (
-        <ul>
+        <ul className={css.castList}>
           {cast.map((item) => (
-            <li key={item.id}>
-              <img src={`${imageBaseUrl}${item.profile_path}`} alt="" />
-              <p>
-                <b>{item.original_name}</b>
-              </p>
-              <p>Character: {item.character}</p>
+            <li key={item.id} className={css.castItem}>
+              <img
+                src={`${imageBaseUrl}${item.profile_path}`}
+                alt=""
+                className={css.castImage}
+              />
+              <div className={css.castDetails}>
+                <p>
+                  <b className={css.text}>{item.original_name}</b>
+                </p>
+                <p className={css.text}>Character: {item.character} </p>
+              </div>
             </li>
           ))}
         </ul>

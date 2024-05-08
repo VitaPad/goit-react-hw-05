@@ -1,0 +1,28 @@
+.title {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+  margin-left: 84px;
+  margin-bottom: 84px;
+}
+.list {
+  list-style: none;
+  display: flex;
+}
+
+.link {
+  color: rgba(194, 194, 194, 1);
+  text-decoration: none;
+}
+.link:hover {
+  box-shadow: 0px 0px 20px 0px rgba(0, 65, 232, 1);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}

@@ -3,6 +3,7 @@ import { getMoviesTrends } from "../../commponents/films-api";
 import Loader from "../../commponents/Loader";
 import ErrorMessage from "../../commponents/ErrorMessage";
 import MovieList from "../../commponents/MovieList";
+import css from "./HomePage.module.css";
 
 export default function HomePage() {
   const [movies, setMovies] = useState([]);
@@ -26,7 +27,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div>
+    <div className={css.container}>
       {isLoading && <Loader />}
       {error && (
         <ErrorMessage
