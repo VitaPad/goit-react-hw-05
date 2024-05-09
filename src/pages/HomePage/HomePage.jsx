@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { getMoviesTrends } from "../../commponents/films-api";
-import Loader from "../../commponents/Loader";
-import ErrorMessage from "../../commponents/ErrorMessage";
-import MovieList from "../../commponents/MovieList";
+import { getMoviesTrends } from "../../components/films-api";
+import Loader from "../../components/Loader";
+import ErrorMessage from "../../components/ErrorMessage";
+import MovieList from "../../components/MovieList";
 import css from "./HomePage.module.css";
 
 export default function HomePage() {
