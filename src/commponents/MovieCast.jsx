@@ -39,11 +39,11 @@ export default function MovieCast() {
                 alt=""
                 className={css.castImage}
               />
-              <div className={css.castDetails}>
+              <div className={css.box}>
                 <p>
                   <b className={css.text}>{item.original_name}</b>
                 </p>
-                <p className={css.text}>Character: {item.character} </p>
+                <p>Character: {item.character}</p>
               </div>
             </li>
           ))}

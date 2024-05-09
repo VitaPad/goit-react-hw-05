@@ -25,3 +25,19 @@
   margin-left: 84px;
   margin-bottom: 36px;
 }
+.box {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  margin-left: 36px;
+  text-align: left;
+}
+.container {
+  display: flex;
+}
+.img {
+  width: auto;
+  display: block;
+  height: auto;
+  object-fit: cover;
+}

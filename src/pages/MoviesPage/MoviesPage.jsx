@@ -6,6 +6,7 @@ import { useEffect, useMemo, useState } from "react";
 import MovieList from "../../commponents/MovieList";
 import { getMovies } from "../../commponents/films-api";
 import LoadMoreButton from "../../commponents/LoadMoreButton";
+import css from "./MoviesPage.module.css";
 
 export default function MoviesPage() {
   const [movies, setMovies] = useState([]);
@@ -54,8 +55,7 @@ export default function MoviesPage() {
   };
 
   return (
-    <div>
-      MoviesPage
+    <div className={css.container}>
       <OwnerFilter value={ownerQuery} onFilter={changeOwnerFilter} />
       {movies && movies.length > 0 && <MovieList movies={searchMovies} />}
       {isLoading && <Loader />}

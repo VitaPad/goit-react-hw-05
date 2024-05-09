@@ -9,7 +9,6 @@
 }
 .castItem {
   display: flex;
-
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
@@ -18,11 +17,22 @@
 }
 
 .castImage {
-  width: 150px;
-  height: auto;
-  margin-bottom: 10px;
+  width: 100%;
+  display: block;
+  height: 100%;
+  object-fit: cover;
 }
 
 .castDetails {
   text-align: center;
+}
+.castList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.box {
+  display: flex;
+  flex-direction: column;
 }
