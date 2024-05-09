@@ -1,11 +1,11 @@
 import { useSearchParams } from "react-router-dom";
-import OwnerFilter from "../../commponents/OwnerFilter";
-import ErrorMessage from "../../commponents/ErrorMessage";
-import Loader from "../../commponents/Loader";
+import OwnerFilter from "../../components/OwnerFilter";
+import ErrorMessage from "../../components/ErrorMessage";
+import Loader from "../../components/Loader";
 import { useEffect, useMemo, useState } from "react";
-import MovieList from "../../commponents/MovieList";
-import { getMovies } from "../../commponents/films-api";
-import LoadMoreButton from "../../commponents/LoadMoreButton";
+import MovieList from "../../components/MovieList";
+import { getMovies } from "../../components/films-api";
+import LoadMoreButton from "../../components/LoadMoreButton";
 import css from "./MoviesPage.module.css";
 
 export default function MoviesPage() {
